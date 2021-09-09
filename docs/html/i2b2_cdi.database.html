@@ -1,0 +1,195 @@
+
+<!--
+
+    This Source Code Form is subject to the terms of the Mozilla Public License, v.
+    2.0 with a Healthcare Disclaimer.
+    A copy of the Mozilla Public License, v. 2.0 with the Healthcare Disclaimer can
+    be found under the top level directory, named LICENSE.
+    If a copy of the MPL was not distributed with this file, You can obtain one at
+    http://mozilla.org/MPL/2.0/.
+    If a copy of the Healthcare Disclaimer was not distributed with this file, You
+    can obtain one at the project website https://github.com/igia.
+
+    Copyright (C) 2021-2022 Persistent Systems, Inc.
+
+-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i2b2_cdi.database package &#8212; I2B2-CDI 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">I2B2-CDI 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">i2b2_cdi.database package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="i2b2-cdi-database-package">
+<h1>i2b2_cdi.database package<a class="headerlink" href="#i2b2-cdi-database-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-i2b2_cdi.database.cdi_database_connections">
+<span id="i2b2-cdi-database-cdi-database-connections-module"></span><h2>i2b2_cdi.database.cdi_database_connections module<a class="headerlink" href="#module-i2b2_cdi.database.cdi_database_connections" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-cdi_database_connections">
+<span id="cdi-database-connections-provide-the-context-manager-class-to-establish-the-connection-to-the-database"></span><h3><a class="reference internal" href="#module-cdi_database_connections" title="cdi_database_connections: module contains class to connect to the database (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cdi_database_connections</span></code></a> – Provide the context manager class to establish the connection to the database<a class="headerlink" href="#module-cdi_database_connections" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="i2b2_cdi.database.cdi_database_connections.I2b2demoDataSource">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.database.cdi_database_connections.</code><code class="sig-name descname">I2b2demoDataSource</code><a class="headerlink" href="#i2b2_cdi.database.cdi_database_connections.I2b2demoDataSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#i2b2_cdi.database.database_helper.DataSource" title="i2b2_cdi.database.database_helper.DataSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">i2b2_cdi.database.database_helper.DataSource</span></code></a></p>
+<p>Provided connection to the i2b2demodata database</p>
+<dl class="py method">
+<dt id="i2b2_cdi.database.cdi_database_connections.I2b2demoDataSource.check_database_connection">
+<code class="sig-name descname">check_database_connection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.database.cdi_database_connections.I2b2demoDataSource.check_database_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the database conection is live or not</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="i2b2_cdi.database.cdi_database_connections.I2b2metaDataSource">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.database.cdi_database_connections.</code><code class="sig-name descname">I2b2metaDataSource</code><a class="headerlink" href="#i2b2_cdi.database.cdi_database_connections.I2b2metaDataSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#i2b2_cdi.database.database_helper.DataSource" title="i2b2_cdi.database.database_helper.DataSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">i2b2_cdi.database.database_helper.DataSource</span></code></a></p>
+<p>Provided connection to the i2b2metadata database</p>
+<dl class="py method">
+<dt id="i2b2_cdi.database.cdi_database_connections.I2b2metaDataSource.check_database_connection">
+<code class="sig-name descname">check_database_connection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.database.cdi_database_connections.I2b2metaDataSource.check_database_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the database conection is live or not</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.database.database_helper">
+<span id="i2b2-cdi-database-database-helper-module"></span><h2>i2b2_cdi.database.database_helper module<a class="headerlink" href="#module-i2b2_cdi.database.database_helper" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-database_helper">
+<span id="database-helper-provide-the-context-manager-class-to-establish-the-connection-to-the-database"></span><h3><a class="reference internal" href="#module-database_helper" title="database_helper: module contains class to connect to the database (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">database_helper</span></code></a> – Provide the context manager class to establish the connection to the database<a class="headerlink" href="#module-database_helper" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="i2b2_cdi.database.database_helper.DataSource">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.database.database_helper.</code><code class="sig-name descname">DataSource</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">server</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">database</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">username</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">password</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.database.database_helper.DataSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provided the database connection and cursor</p>
+<dl class="py method">
+<dt id="i2b2_cdi.database.database_helper.DataSource.check_database_connection">
+<code class="sig-name descname">check_database_connection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.database.database_helper.DataSource.check_database_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether the database conection is live or not</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.database.database_helper.DataSource.database">
+<code class="sig-name descname">database</code><a class="headerlink" href="#i2b2_cdi.database.database_helper.DataSource.database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Database name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.database.database_helper.DataSource.password">
+<code class="sig-name descname">password</code><a class="headerlink" href="#i2b2_cdi.database.database_helper.DataSource.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Database password</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.database.database_helper.DataSource.server">
+<code class="sig-name descname">server</code><a class="headerlink" href="#i2b2_cdi.database.database_helper.DataSource.server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Database server url</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.database.database_helper.DataSource.username">
+<code class="sig-name descname">username</code><a class="headerlink" href="#i2b2_cdi.database.database_helper.DataSource.username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Database username</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.database">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-i2b2_cdi.database" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">i2b2_cdi.database package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-i2b2_cdi.database.cdi_database_connections">i2b2_cdi.database.cdi_database_connections module</a><ul>
+<li><a class="reference internal" href="#module-cdi_database_connections"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cdi_database_connections</span></code> – Provide the context manager class to establish the connection to the database</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.database.database_helper">i2b2_cdi.database.database_helper module</a><ul>
+<li><a class="reference internal" href="#module-database_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">database_helper</span></code> – Provide the context manager class to establish the connection to the database</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.database">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">I2B2-CDI 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">i2b2_cdi.database package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, i2b2-cdi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.0.
+    </div>
+  </body>
+</html>

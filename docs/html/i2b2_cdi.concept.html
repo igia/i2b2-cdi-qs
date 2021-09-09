@@ -1,0 +1,217 @@
+
+<!--
+
+    This Source Code Form is subject to the terms of the Mozilla Public License, v.
+    2.0 with a Healthcare Disclaimer.
+    A copy of the Mozilla Public License, v. 2.0 with the Healthcare Disclaimer can
+    be found under the top level directory, named LICENSE.
+    If a copy of the MPL was not distributed with this file, You can obtain one at
+    http://mozilla.org/MPL/2.0/.
+    If a copy of the Healthcare Disclaimer was not distributed with this file, You
+    can obtain one at the project website https://github.com/igia.
+
+    Copyright (C) 2021-2022 Persistent Systems, Inc.
+
+-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i2b2_cdi.concept package &#8212; I2B2-CDI 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">I2B2-CDI 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">i2b2_cdi.concept package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="i2b2-cdi-concept-package">
+<h1>i2b2_cdi.concept package<a class="headerlink" href="#i2b2-cdi-concept-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-i2b2_cdi.concept.concept_delete">
+<span id="i2b2-cdi-concept-concept-delete-module"></span><h2>i2b2_cdi.concept.concept_delete module<a class="headerlink" href="#module-i2b2_cdi.concept.concept_delete" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-concept_delete">
+<span id="concept-delete-delete-the-concepts-from-i2b2-instance"></span><h3><a class="reference internal" href="#module-concept_delete" title="concept_delete: module contains methods for deleting concepts (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">concept_delete</span></code></a> – Delete the concepts from i2b2 instance<a class="headerlink" href="#module-concept_delete" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt id="i2b2_cdi.concept.concept_delete.delete">
+<code class="sig-prename descclassname">i2b2_cdi.concept.concept_delete.</code><code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cursor</span></em>, <em class="sig-param"><span class="n">queries</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.concept.concept_delete.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the provided query using the database cursor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cursor</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">pyodbc.Connection.cursor</span></code>, mandatory) – Cursor obtained from the Connection object connected to the database</p></li>
+<li><p><strong>queries</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span> <span class="pre">of</span> <span class="pre">str</span></code>, mandatory) – List of delete queries to be executed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.concept.concept_delete.delete_concepts_i2b2_demodata">
+<code class="sig-prename descclassname">i2b2_cdi.concept.concept_delete.</code><code class="sig-name descname">delete_concepts_i2b2_demodata</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.concept.concept_delete.delete_concepts_i2b2_demodata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the concepts from i2b2 instance</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.concept.concept_delete.delete_concepts_i2b2_metadata">
+<code class="sig-prename descclassname">i2b2_cdi.concept.concept_delete.</code><code class="sig-name descname">delete_concepts_i2b2_metadata</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.concept.concept_delete.delete_concepts_i2b2_metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the metadata for the concepts from i2b2 instance</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.concept.perform_concept">
+<span id="i2b2-cdi-concept-perform-concept-module"></span><h2>i2b2_cdi.concept.perform_concept module<a class="headerlink" href="#module-i2b2_cdi.concept.perform_concept" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-perform_concept">
+<span id="perform-concept-process-concepts"></span><h3><a class="reference internal" href="#module-perform_concept" title="perform_concept: module contains methods for importing, deleting concepts (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">perform_concept</span></code></a> – process concepts<a class="headerlink" href="#module-perform_concept" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt id="i2b2_cdi.concept.perform_concept.create_concept_zip">
+<code class="sig-prename descclassname">i2b2_cdi.concept.perform_concept.</code><code class="sig-name descname">create_concept_zip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">files</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.concept.perform_concept.create_concept_zip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates input files. creates missing files. and finally creates the zip file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>files</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – List of input files.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.concept.perform_concept.delete_concepts">
+<code class="sig-prename descclassname">i2b2_cdi.concept.perform_concept.</code><code class="sig-name descname">delete_concepts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.concept.perform_concept.delete_concepts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the concepts from i2b2 instance</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.concept.perform_concept.get_argument_parser">
+<code class="sig-prename descclassname">i2b2_cdi.concept.perform_concept.</code><code class="sig-name descname">get_argument_parser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.concept.perform_concept.get_argument_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the command line arguments and passes to the ArgumentParser</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>arguments provided on command line while running the script</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Namespace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.concept.perform_concept.get_sftp_connection">
+<code class="sig-prename descclassname">i2b2_cdi.concept.perform_concept.</code><code class="sig-name descname">get_sftp_connection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">step</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.concept.perform_concept.get_sftp_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helps connecting to the SFTP server</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>step</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Name of the calling method</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>server instance on successfully establishment of connection to the SFTP server</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pysftp.Connection</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.concept.perform_concept.load_concepts">
+<code class="sig-prename descclassname">i2b2_cdi.concept.perform_concept.</code><code class="sig-name descname">load_concepts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">files</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.concept.perform_concept.load_concepts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the concepts from the given zip file to the i2b2 instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the zip file which needs to be imported</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.concept">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-i2b2_cdi.concept" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">i2b2_cdi.concept package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-i2b2_cdi.concept.concept_delete">i2b2_cdi.concept.concept_delete module</a><ul>
+<li><a class="reference internal" href="#module-concept_delete"><code class="xref py py-mod docutils literal notranslate"><span class="pre">concept_delete</span></code> – Delete the concepts from i2b2 instance</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.concept.perform_concept">i2b2_cdi.concept.perform_concept module</a><ul>
+<li><a class="reference internal" href="#module-perform_concept"><code class="xref py py-mod docutils literal notranslate"><span class="pre">perform_concept</span></code> – process concepts</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.concept">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">I2B2-CDI 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">i2b2_cdi.concept package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, i2b2-cdi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.0.
+    </div>
+  </body>
+</html>

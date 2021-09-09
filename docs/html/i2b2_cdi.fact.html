@@ -1,0 +1,633 @@
+
+<!--
+
+    This Source Code Form is subject to the terms of the Mozilla Public License, v.
+    2.0 with a Healthcare Disclaimer.
+    A copy of the Mozilla Public License, v. 2.0 with the Healthcare Disclaimer can
+    be found under the top level directory, named LICENSE.
+    If a copy of the MPL was not distributed with this file, You can obtain one at
+    http://mozilla.org/MPL/2.0/.
+    If a copy of the Healthcare Disclaimer was not distributed with this file, You
+    can obtain one at the project website https://github.com/igia.
+
+    Copyright (C) 2021-2022 Persistent Systems, Inc.
+
+-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i2b2_cdi.fact package &#8212; I2B2-CDI 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">I2B2-CDI 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">i2b2_cdi.fact package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="i2b2-cdi-fact-package">
+<h1>i2b2_cdi.fact package<a class="headerlink" href="#i2b2-cdi-fact-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-i2b2_cdi.fact.DeIdFacts_old">
+<span id="i2b2-cdi-fact-deidfacts-old-module"></span><h2>i2b2_cdi.fact.DeIdFacts_old module<a class="headerlink" href="#module-i2b2_cdi.fact.DeIdFacts_old" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-DeIdFacts">
+<span id="deidfacts-deidentify-the-fact-data"></span><h3><a class="reference internal" href="#module-DeIdFacts" title="DeIdFacts: module contains methods for deidentify the fact data (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">DeIdFacts</span></code></a> – DeIdentify the fact data<a class="headerlink" href="#module-DeIdFacts" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="i2b2_cdi.fact.DeIdFacts_old.Deid">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.fact.DeIdFacts_old.</code><code class="sig-name descname">Deid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">phiPath</span></em>, <em class="sig-param"><span class="n">dateShift</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.DeIdFacts_old.Deid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class provide the methods for deidentify the data</p>
+<dl class="py method">
+<dt id="i2b2_cdi.fact.DeIdFacts_old.Deid.deidentify_facts">
+<code class="sig-name descname">deidentify_facts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.DeIdFacts_old.Deid.deidentify_facts" title="Permalink to this definition">¶</a></dt>
+<dd><p>DeIdentify the fact data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>path to the deidentified file</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.DeIdFacts_old.Deid.printProgressBar">
+<code class="sig-name descname">printProgressBar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em>, <em class="sig-param"><span class="n">max</span></em>, <em class="sig-param"><span class="n">postText</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.DeIdFacts_old.Deid.printProgressBar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the progressbar for the operations</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.DeIdFacts_old.Deid.test">
+<code class="sig-name descname">test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.DeIdFacts_old.Deid.test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.DeIdFacts_old.Deid.writeEncounterMapping">
+<code class="sig-name descname">writeEncounterMapping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.DeIdFacts_old.Deid.writeEncounterMapping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.DeIdFacts_old.Deid.writePatientMapping">
+<code class="sig-name descname">writePatientMapping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.DeIdFacts_old.Deid.writePatientMapping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.fact.DeIdFacts_old.deidentify_obs_facts">
+<code class="sig-prename descclassname">i2b2_cdi.fact.DeIdFacts_old.</code><code class="sig-name descname">deidentify_obs_facts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataShiftFlag</span></em>, <em class="sig-param"><span class="n">_file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.DeIdFacts_old.deidentify_obs_facts" title="Permalink to this definition">¶</a></dt>
+<dd><p>DeIdentify the fact data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataShiftFlag</strong> (<em>boolean</em>) – dateshift flag</p></li>
+<li><p><strong>_file</strong> (<em>str</em>) – path to the file to be deidentified</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>path to the deidentified file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.fact.DeIdFacts_old.prtlast">
+<code class="sig-prename descclassname">i2b2_cdi.fact.DeIdFacts_old.</code><code class="sig-name descname">prtlast</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.DeIdFacts_old.prtlast" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.fact.csv_to_bcp_old">
+<span id="i2b2-cdi-fact-csv-to-bcp-old-module"></span><h2>i2b2_cdi.fact.csv_to_bcp_old module<a class="headerlink" href="#module-i2b2_cdi.fact.csv_to_bcp_old" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-bcp">
+<span id="transform-file-transform-data-from-csv-file-to-bcp"></span><h3><a class="reference internal" href="i2b2_cdi.patient.html#module-transform_file" title="transform_file: module contains methods for transforming data from csv file to bcp file (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">transform_file</span></code></a> – transform data from csv file to bcp<a class="headerlink" href="#module-bcp" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.TransformFile">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.fact.csv_to_bcp_old.</code><code class="sig-name descname">TransformFile</code><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.TransformFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The class provides the various methods for transforming csv data to bcp file</p>
+<dl class="py attribute">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.TransformFile.em_fields">
+<code class="sig-name descname">em_fields</code><em class="property"> = ['ENCOUNTER_IDE', 'ENCOUNTER_IDE_SOURCE', 'PROJECT_ID', 'ENCOUNTER_NUM', 'PATIENT_IDE', 'PATIENT_IDE_SOURCE', 'ENCOUNTER_IDE_STATUS', 'UPLOAD_DATE', 'UPDATE_DATE', 'DOWNLOAD_DATE', 'IMPORT_DATE', 'SOURCESYSTEM_CD', 'UPLOAD_ID']</em><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.TransformFile.em_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.TransformFile.float_precision_digits">
+<code class="sig-name descname">float_precision_digits</code><em class="property"> = 10</em><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.TransformFile.float_precision_digits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.TransformFile.ob_bcp_to_cdi">
+<code class="sig-name descname">ob_bcp_to_cdi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bcp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.TransformFile.ob_bcp_to_cdi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.TransformFile.ob_cdi_to_bcp">
+<code class="sig-name descname">ob_cdi_to_bcp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cdi_path</span></em>, <em class="sig-param"><span class="n">bcp_path</span></em>, <em class="sig-param"><span class="n">sep</span><span class="o">=</span><span class="default_value">'/#/'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.TransformFile.ob_cdi_to_bcp" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts the cdi to bcp file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cdi_path</strong> (<em>str</em>) – path to the cdi file</p></li>
+<li><p><strong>bcp_path</strong> (<em>str</em>) – path to the bcp file</p></li>
+<li><p><strong>sep</strong> (<em>str</em>) – separator for bcp file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>provide the type of instance/value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.TransformFile.ob_fields">
+<code class="sig-name descname">ob_fields</code><em class="property"> = ['ENCOUNTER_NUM', 'PATIENT_NUM', 'CONCEPT_CD', 'PROVIDER_ID', 'START_DATE', 'MODIFIER_CD', 'INSTANCE_NUM', 'VALTYPE_CD', 'TVAL_CHAR', 'NVAL_NUM', 'VALUEFLAG_CD', 'QUANTITY_NUM', 'UNITS_CD', 'END_DATE', 'LOCATION_CD', 'OBSERVATION_BLOB', 'CONFIDENCE_NUM', 'UPDATE_DATE', 'DOWNLOAD_DATE', 'IMPORT_DATE', 'SOURCESYSTEM_CD', 'UPLOAD_ID', 'TEXT_SEARCH_INDEX']</em><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.TransformFile.ob_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.TransformFile.ob_float_fields">
+<code class="sig-name descname">ob_float_fields</code><em class="property"> = ['NVAL_NUM', 'QUANTITY_NUM', 'CONFIDENCE_NUM', 'UPLOAD_ID']</em><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.TransformFile.ob_float_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.TransformFile.ob_int_fields">
+<code class="sig-name descname">ob_int_fields</code><em class="property"> = ['ENCOUNTER_NUM', 'PATIENT_NUM', 'INSTANCE_NUM']</em><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.TransformFile.ob_int_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.TransformFile.pm_fields">
+<code class="sig-name descname">pm_fields</code><em class="property"> = ['PATIENT_IDE', 'PATIENT_IDE_SOURCE', 'PATIENT_NUM', 'PATIENT_IDE_STATUS', 'PROJECT_ID', 'UPLOAD_DATE', 'UPDATE_DATE', 'DOWNLOAD_DATE', 'IMPORT_DATE', 'SOURCESYSTEM_CD', 'UPLOAD_ID']</em><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.TransformFile.pm_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.TransformFile.printProgressBar">
+<code class="sig-name descname">printProgressBar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em>, <em class="sig-param"><span class="n">max</span></em>, <em class="sig-param"><span class="n">postText</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.TransformFile.printProgressBar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the progressbar for the operations</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.TransformFile.read_bcp">
+<code class="sig-name descname">read_bcp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filePath</span></em>, <em class="sig-param"><span class="n">fields</span></em>, <em class="sig-param"><span class="n">sep</span><span class="o">=</span><span class="default_value">'\\/#\\/'</span></em>, <em class="sig-param"><span class="n">lineterminator</span><span class="o">=</span><span class="default_value">'\n'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.TransformFile.read_bcp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.TransformFile.write_bcp">
+<code class="sig-name descname">write_bcp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cdiob</span></em>, <em class="sig-param"><span class="n">filePath</span></em>, <em class="sig-param"><span class="n">sep</span><span class="o">=</span><span class="default_value">'\\/#\\/'</span></em>, <em class="sig-param"><span class="n">lineterminator</span><span class="o">=</span><span class="default_value">'\n'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.TransformFile.write_bcp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes data to the bcp file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.cdi_to_bcp">
+<code class="sig-prename descclassname">i2b2_cdi.fact.csv_to_bcp_old.</code><code class="sig-name descname">cdi_to_bcp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.cdi_to_bcp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the cdi file to bcp file and provide the path to the bcp file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_file</strong> (<em>str</em>) – path to the cdi file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>path to the bcp file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.fact.csv_to_bcp_old.getValType">
+<code class="sig-prename descclassname">i2b2_cdi.fact.csv_to_bcp_old.</code><code class="sig-name descname">getValType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.csv_to_bcp_old.getValType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the type of value provided</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>type</em>) – value/instance</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>provide the type of instance/value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>type</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.fact.deid_fact">
+<span id="i2b2-cdi-fact-deid-fact-module"></span><h2>i2b2_cdi.fact.deid_fact module<a class="headerlink" href="#module-i2b2_cdi.fact.deid_fact" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-deid_fact">
+<span id="deid-fact-de-identifying-facts"></span><h3><a class="reference internal" href="#module-deid_fact" title="deid_fact: module contains methods for mappping src_patient_id with i2b2 generated patient_num. (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deid_fact</span></code></a> – De-identifying facts<a class="headerlink" href="#module-deid_fact" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="i2b2_cdi.fact.deid_fact.DeidFact">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.fact.deid_fact.</code><code class="sig-name descname">DeidFact</code><a class="headerlink" href="#i2b2_cdi.fact.deid_fact.DeidFact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The class provides the interface for de-identifying i.e. (mapping src patient id to i2b2 generated patient num) observation fact file</p>
+<dl class="py method">
+<dt id="i2b2_cdi.fact.deid_fact.DeidFact.deidentify_fact">
+<code class="sig-name descname">deidentify_fact</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">patient_map</span></em>, <em class="sig-param"><span class="n">encounter_map</span></em>, <em class="sig-param"><span class="n">obs_file_path</span></em>, <em class="sig-param"><span class="n">input_csv_delimiter</span></em>, <em class="sig-param"><span class="n">deid_file_path</span></em>, <em class="sig-param"><span class="n">output_deid_delimiter</span></em>, <em class="sig-param"><span class="n">error_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.deid_fact.DeidFact.deidentify_fact" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method de-identifies csv file and error records will be logged to log file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>patient_map</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Patient map for de-identification.</p></li>
+<li><p><strong>encounter_map</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Encounter map for de-identification.</p></li>
+<li><p><strong>obs_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the input csv file which needs to be de-identified</p></li>
+<li><p><strong>input_csv_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimiter of the input csv file, which will be used while reading csv file.</p></li>
+<li><p><strong>deid_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the de-identified output file.</p></li>
+<li><p><strong>output_deid_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimiter of the output file, which will be used while writing deid file.</p></li>
+<li><p><strong>error_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the error file, which contains error records</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.deid_fact.DeidFact.is_valid_date_format">
+<code class="sig-name descname">is_valid_date_format</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_date</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.deid_fact.DeidFact.is_valid_date_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method checks for date format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_date</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Date to be parsed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if date format is correct else false.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.deid_fact.DeidFact.write_deid_file_header">
+<code class="sig-name descname">write_deid_file_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">deid_file_path</span></em>, <em class="sig-param"><span class="n">output_deid_delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.deid_fact.DeidFact.write_deid_file_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes the header of deid file using csv writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deid_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the deid file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.deid_fact.DeidFact.write_error_file_header">
+<code class="sig-name descname">write_error_file_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">deid_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.deid_fact.DeidFact.write_error_file_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes the header of error file using csv writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deid_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the error file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.deid_fact.DeidFact.write_to_deid_file">
+<code class="sig-name descname">write_to_deid_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_valid_rows_arr</span></em>, <em class="sig-param"><span class="n">deid_file_path</span></em>, <em class="sig-param"><span class="n">output_deid_delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.deid_fact.DeidFact.write_to_deid_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes the list of rows to the deid file using csv writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_valid_rows_arr</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – List of valid facts to be written into deid file.</p></li>
+<li><p><strong>deid_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the output deid file.</p></li>
+<li><p><strong>output_deid_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimeter to be used in deid file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.deid_fact.DeidFact.write_to_error_file">
+<code class="sig-name descname">write_to_error_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">error_file_path</span></em>, <em class="sig-param"><span class="n">_error_rows_arr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.deid_fact.DeidFact.write_to_error_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes the list of rows to the error file using csv writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>error_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the error file.</p></li>
+<li><p><strong>_error_rows_arr</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – List of invalid facts to be written into error file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.fact.deid_fact.do_deidentify">
+<code class="sig-prename descclassname">i2b2_cdi.fact.deid_fact.</code><code class="sig-name descname">do_deidentify</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obs_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.deid_fact.do_deidentify" title="Permalink to this definition">¶</a></dt>
+<dd><p>This methods contains housekeeping needs to be done before de-identifing observation fact file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obs_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the input observation fact csv file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Path to de-identified observation fact file
+str: path to the error log file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.fact.delete_fact">
+<span id="i2b2-cdi-fact-delete-fact-module"></span><h2>i2b2_cdi.fact.delete_fact module<a class="headerlink" href="#module-i2b2_cdi.fact.delete_fact" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-delete_fact">
+<span id="delete-fact-delete-the-observation-facts"></span><h3><a class="reference internal" href="#module-delete_fact" title="delete_fact: module contains methods for deleting the observation facts from i2b2 instance (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">delete_fact</span></code></a> – Delete the observation facts<a class="headerlink" href="#module-delete_fact" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt id="i2b2_cdi.fact.delete_fact.delete">
+<code class="sig-prename descclassname">i2b2_cdi.fact.delete_fact.</code><code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cursor</span></em>, <em class="sig-param"><span class="n">queries</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.delete_fact.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the provided query using the database cursor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cursor</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">pyodbc.Connection.cursor</span></code>, mandatory) – Cursor obtained from the Connection object connected to the database</p></li>
+<li><p><strong>queries</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span> <span class="pre">of</span> <span class="pre">str</span></code>, mandatory) – List of delete queries to be executed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.fact.delete_fact.delete_facts_i2b2_demodata">
+<code class="sig-prename descclassname">i2b2_cdi.fact.delete_fact.</code><code class="sig-name descname">delete_facts_i2b2_demodata</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.delete_fact.delete_facts_i2b2_demodata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the observation facts data from i2b2 instance</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.fact.perform_fact">
+<span id="i2b2-cdi-fact-perform-fact-module"></span><h2>i2b2_cdi.fact.perform_fact module<a class="headerlink" href="#module-i2b2_cdi.fact.perform_fact" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-perform_fact">
+<span id="perform-fact-process-facts"></span><h3><a class="reference internal" href="#module-perform_fact" title="perform_fact: module contains methods for importing, deleting facts (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">perform_fact</span></code></a> – process facts<a class="headerlink" href="#module-perform_fact" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt id="i2b2_cdi.fact.perform_fact.bcp_upload">
+<code class="sig-prename descclassname">i2b2_cdi.fact.perform_fact.</code><code class="sig-name descname">bcp_upload</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bcp_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.perform_fact.bcp_upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upload the fact data from bcp file to the i2b2 instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>bcp_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the bcp file having fact data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.fact.perform_fact.convert_csv_to_bcp">
+<code class="sig-prename descclassname">i2b2_cdi.fact.perform_fact.</code><code class="sig-name descname">convert_csv_to_bcp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">deid_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.perform_fact.convert_csv_to_bcp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform the cdi fact file to the bcp fact file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deid_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the deidentified file which needs to be converted to bcp file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>path to the bcp file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.fact.perform_fact.de_identify_facts">
+<code class="sig-prename descclassname">i2b2_cdi.fact.perform_fact.</code><code class="sig-name descname">de_identify_facts</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obs_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.perform_fact.de_identify_facts" title="Permalink to this definition">¶</a></dt>
+<dd><p>DeIdentify the fact data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the file which needs to be deidentified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>path to the deidentified file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.fact.perform_fact.delete_facts">
+<code class="sig-prename descclassname">i2b2_cdi.fact.perform_fact.</code><code class="sig-name descname">delete_facts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.perform_fact.delete_facts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the facts from i2b2 instance</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.fact.perform_fact.get_argument_parser">
+<code class="sig-prename descclassname">i2b2_cdi.fact.perform_fact.</code><code class="sig-name descname">get_argument_parser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.perform_fact.get_argument_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the command line arguments and passes to the ArgumentParser</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>arguments provided on command line while running the script</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Namespace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.fact.perform_fact.load_facts_using_bcp">
+<code class="sig-prename descclassname">i2b2_cdi.fact.perform_fact.</code><code class="sig-name descname">load_facts_using_bcp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obs_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.perform_fact.load_facts_using_bcp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the facts from the given file to the i2b2 instance using bcp tool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the file which needs to be imported</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.fact.transform_file">
+<span id="i2b2-cdi-fact-transform-file-module"></span><h2>i2b2_cdi.fact.transform_file module<a class="headerlink" href="#module-i2b2_cdi.fact.transform_file" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-transform_file">
+<span id="transform-file-convert-csv-file-to-bcp"></span><h3><a class="reference internal" href="i2b2_cdi.patient.html#module-transform_file" title="transform_file: module contains methods for transforming data from csv file to bcp file (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">transform_file</span></code></a> – Convert csv file to bcp<a class="headerlink" href="#module-transform_file" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="i2b2_cdi.fact.transform_file.TransformFile">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.fact.transform_file.</code><code class="sig-name descname">TransformFile</code><a class="headerlink" href="#i2b2_cdi.fact.transform_file.TransformFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The class provides the various methods for transforming csv data to bcp file</p>
+<dl class="py method">
+<dt id="i2b2_cdi.fact.transform_file.TransformFile.csv_to_bcp">
+<code class="sig-name descname">csv_to_bcp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_file_path</span></em>, <em class="sig-param"><span class="n">input_csv_delimiter</span></em>, <em class="sig-param"><span class="n">bcp_file_path</span></em>, <em class="sig-param"><span class="n">output_bcp_delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.transform_file.TransformFile.csv_to_bcp" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method transforms csv file to bcp, Error records will be logged to log file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>csv_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the input csv file which needs to be converted to bcp file</p></li>
+<li><p><strong>input_csv_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimiter of the input csv file, which will be used while reading csv file.</p></li>
+<li><p><strong>bcp_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the output bcp file.</p></li>
+<li><p><strong>output_bcp_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimiter of the output bcp file, which will be used while writing bcp file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.transform_file.TransformFile.getValType">
+<code class="sig-name descname">getValType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.transform_file.TransformFile.getValType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the type of value provided</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>type</em>) – value/instance</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>provide the type of instance/value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.fact.transform_file.TransformFile.write_to_bcp_file">
+<code class="sig-name descname">write_to_bcp_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_valid_rows_arr</span></em>, <em class="sig-param"><span class="n">bcp_file_path</span></em>, <em class="sig-param"><span class="n">output_bcp_delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.transform_file.TransformFile.write_to_bcp_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes the list of rows to the bcp file using csv writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_valid_rows_arr</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – List of valid facts to be written into bcp file.</p></li>
+<li><p><strong>bcp_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the output bcp file.</p></li>
+<li><p><strong>output_bcp_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimeter to be used in bcp file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.fact.transform_file.csv_to_bcp">
+<code class="sig-prename descclassname">i2b2_cdi.fact.transform_file.</code><code class="sig-name descname">csv_to_bcp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.fact.transform_file.csv_to_bcp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the csv file to bcp file and provide the path to the bcp file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_file</strong> (<em>str</em>) – path to the csv file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>path to the bcp file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.fact">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-i2b2_cdi.fact" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">i2b2_cdi.fact package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-i2b2_cdi.fact.DeIdFacts_old">i2b2_cdi.fact.DeIdFacts_old module</a><ul>
+<li><a class="reference internal" href="#module-DeIdFacts"><code class="xref py py-mod docutils literal notranslate"><span class="pre">DeIdFacts</span></code> – DeIdentify the fact data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.fact.csv_to_bcp_old">i2b2_cdi.fact.csv_to_bcp_old module</a><ul>
+<li><a class="reference internal" href="#module-bcp"><code class="xref py py-mod docutils literal notranslate"><span class="pre">transform_file</span></code> – transform data from csv file to bcp</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.fact.deid_fact">i2b2_cdi.fact.deid_fact module</a><ul>
+<li><a class="reference internal" href="#module-deid_fact"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deid_fact</span></code> – De-identifying facts</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.fact.delete_fact">i2b2_cdi.fact.delete_fact module</a><ul>
+<li><a class="reference internal" href="#module-delete_fact"><code class="xref py py-mod docutils literal notranslate"><span class="pre">delete_fact</span></code> – Delete the observation facts</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.fact.perform_fact">i2b2_cdi.fact.perform_fact module</a><ul>
+<li><a class="reference internal" href="#module-perform_fact"><code class="xref py py-mod docutils literal notranslate"><span class="pre">perform_fact</span></code> – process facts</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.fact.transform_file">i2b2_cdi.fact.transform_file module</a><ul>
+<li><a class="reference internal" href="#module-transform_file"><code class="xref py py-mod docutils literal notranslate"><span class="pre">transform_file</span></code> – Convert csv file to bcp</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.fact">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">I2B2-CDI 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">i2b2_cdi.fact package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, i2b2-cdi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.0.
+    </div>
+  </body>
+</html>
