@@ -1,0 +1,539 @@
+
+<!--
+
+    This Source Code Form is subject to the terms of the Mozilla Public License, v.
+    2.0 with a Healthcare Disclaimer.
+    A copy of the Mozilla Public License, v. 2.0 with the Healthcare Disclaimer can
+    be found under the top level directory, named LICENSE.
+    If a copy of the MPL was not distributed with this file, You can obtain one at
+    http://mozilla.org/MPL/2.0/.
+    If a copy of the Healthcare Disclaimer was not distributed with this file, You
+    can obtain one at the project website https://github.com/igia.
+
+    Copyright (C) 2021-2022 Persistent Systems, Inc.
+
+-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i2b2_cdi.patient package &#8212; I2B2-CDI 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">I2B2-CDI 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">i2b2_cdi.patient package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="i2b2-cdi-patient-package">
+<h1>i2b2_cdi.patient package<a class="headerlink" href="#i2b2-cdi-patient-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-i2b2_cdi.patient.deid_patient">
+<span id="i2b2-cdi-patient-deid-patient-module"></span><h2>i2b2_cdi.patient.deid_patient module<a class="headerlink" href="#module-i2b2_cdi.patient.deid_patient" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-deid_patient">
+<span id="deid-patient-de-identifying-patient-dimensions"></span><h3><a class="reference internal" href="#module-deid_patient" title="deid_patient: module contains methods for mappping src_patient_id with i2b2 generated patient_num. (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deid_patient</span></code></a> – De-identifying patient dimensions<a class="headerlink" href="#module-deid_patient" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="i2b2_cdi.patient.deid_patient.DeidPatient">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.patient.deid_patient.</code><code class="sig-name descname">DeidPatient</code><a class="headerlink" href="#i2b2_cdi.patient.deid_patient.DeidPatient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The class provides the interface for de-identifying i.e. (mapping src patient id to i2b2 generated patient num) patients file</p>
+<dl class="py method">
+<dt id="i2b2_cdi.patient.deid_patient.DeidPatient.deidentify_patient">
+<code class="sig-name descname">deidentify_patient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">patient_map</span></em>, <em class="sig-param"><span class="n">csv_file_path</span></em>, <em class="sig-param"><span class="n">input_csv_delimiter</span></em>, <em class="sig-param"><span class="n">deid_file_path</span></em>, <em class="sig-param"><span class="n">output_deid_delimiter</span></em>, <em class="sig-param"><span class="n">error_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.deid_patient.DeidPatient.deidentify_patient" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method de-identifies csv file and error records will be logged to log file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>patient_map</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Patient map for de-identification.</p></li>
+<li><p><strong>csv_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the input csv file which needs to be de-identified</p></li>
+<li><p><strong>input_csv_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimiter of the input csv file, which will be used while reading csv file.</p></li>
+<li><p><strong>deid_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the de-identified output file.</p></li>
+<li><p><strong>output_deid_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimiter of the output deid file, which will be used while writing deid file.</p></li>
+<li><p><strong>error_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the error file, which contains error records</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.patient.deid_patient.DeidPatient.is_valid_date_format">
+<code class="sig-name descname">is_valid_date_format</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_date</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.deid_patient.DeidPatient.is_valid_date_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method checks for date format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_date</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Date to be parsed</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if date format is correct else false.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.patient.deid_patient.DeidPatient.write_deid_file_header">
+<code class="sig-name descname">write_deid_file_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">deid_file_path</span></em>, <em class="sig-param"><span class="n">output_deid_delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.deid_patient.DeidPatient.write_deid_file_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes the header of deid file using csv writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deid_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the deid file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.patient.deid_patient.DeidPatient.write_error_file_header">
+<code class="sig-name descname">write_error_file_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">deid_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.deid_patient.DeidPatient.write_error_file_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes the header of error file using csv writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deid_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the error file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.patient.deid_patient.DeidPatient.write_to_deid_file">
+<code class="sig-name descname">write_to_deid_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_valid_rows_arr</span></em>, <em class="sig-param"><span class="n">deid_file_path</span></em>, <em class="sig-param"><span class="n">output_deid_delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.deid_patient.DeidPatient.write_to_deid_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes the list of rows to the deid file using csv writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_valid_rows_arr</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – List of valid encounters to be written into deid file.</p></li>
+<li><p><strong>deid_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the output deid file.</p></li>
+<li><p><strong>output_deid_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimeter to be used in deid file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.patient.deid_patient.DeidPatient.write_to_error_file">
+<code class="sig-name descname">write_to_error_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">error_file_path</span></em>, <em class="sig-param"><span class="n">_error_rows_arr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.deid_patient.DeidPatient.write_to_error_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes the list of rows to the error file using csv writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>error_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the error file.</p></li>
+<li><p><strong>_error_rows_arr</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – List of invalid encounters to be written into error file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.deid_patient.do_deidentify">
+<code class="sig-prename descclassname">i2b2_cdi.patient.deid_patient.</code><code class="sig-name descname">do_deidentify</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.deid_patient.do_deidentify" title="Permalink to this definition">¶</a></dt>
+<dd><p>This methods contains housekeeping needs to be done before de-identifing patient file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>csv_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the input patient csv file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Path to de-identified patient file
+str: path to the error log file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.patient.delete_patient">
+<span id="i2b2-cdi-patient-delete-patient-module"></span><h2>i2b2_cdi.patient.delete_patient module<a class="headerlink" href="#module-i2b2_cdi.patient.delete_patient" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-delete_patient">
+<span id="delete-patient-delete-the-patient-mapping"></span><h3><a class="reference internal" href="#module-delete_patient" title="delete_patient: module contains methods for deleting the patient mapping from i2b2 instance (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">delete_patient</span></code></a> – Delete the patient mapping<a class="headerlink" href="#module-delete_patient" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt id="i2b2_cdi.patient.delete_patient.delete">
+<code class="sig-prename descclassname">i2b2_cdi.patient.delete_patient.</code><code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cursor</span></em>, <em class="sig-param"><span class="n">queries</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.delete_patient.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the provided query using the database cursor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cursor</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">pyodbc.Connection.cursor</span></code>, mandatory) – Cursor obtained from the Connection object connected to the database</p></li>
+<li><p><strong>queries</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span> <span class="pre">of</span> <span class="pre">str</span></code>, mandatory) – List of delete queries to be executed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.delete_patient.delete_patient_mapping_i2b2_demodata">
+<code class="sig-prename descclassname">i2b2_cdi.patient.delete_patient.</code><code class="sig-name descname">delete_patient_mapping_i2b2_demodata</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.delete_patient.delete_patient_mapping_i2b2_demodata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete patient mapping data from i2b2 instance</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.delete_patient.delete_patients_i2b2_demodata">
+<code class="sig-prename descclassname">i2b2_cdi.patient.delete_patient.</code><code class="sig-name descname">delete_patients_i2b2_demodata</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.delete_patient.delete_patients_i2b2_demodata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete patients data from i2b2 instance</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.patient.patient_mapping">
+<span id="i2b2-cdi-patient-patient-mapping-module"></span><h2>i2b2_cdi.patient.patient_mapping module<a class="headerlink" href="#module-i2b2_cdi.patient.patient_mapping" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-patient_mapping">
+<span id="patient-mapping-create-get-patient-mapping"></span><h3><a class="reference internal" href="#module-patient_mapping" title="patient_mapping: module contains method for creating, retriving encounter mapping from i2b2 instance (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">patient_mapping</span></code></a> – Create/Get patient mapping<a class="headerlink" href="#module-patient_mapping" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="i2b2_cdi.patient.patient_mapping.PatientMapping">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.patient.patient_mapping.</code><code class="sig-name descname">PatientMapping</code><a class="headerlink" href="#i2b2_cdi.patient.patient_mapping.PatientMapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The class provides the interface for creating patient mapping i.e. (mapping src encounter id to i2b2 generated encounter num)</p>
+<dl class="py method">
+<dt id="i2b2_cdi.patient.patient_mapping.PatientMapping.check_if_patient_exists">
+<code class="sig-name descname">check_if_patient_exists</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pt_ids</span></em>, <em class="sig-param"><span class="n">patient_map</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.patient_mapping.PatientMapping.check_if_patient_exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method checks if patient mapping already exists in a patient_map</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pt_ids</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – List of src patient ids from different sources.</p></li>
+<li><p><strong>patient_map</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Patient map that contains existing mapping.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.patient.patient_mapping.PatientMapping.create_patient_mapping">
+<code class="sig-name descname">create_patient_mapping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mrn_file_path</span></em>, <em class="sig-param"><span class="n">mrn_file_delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.patient_mapping.PatientMapping.create_patient_mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method creates patient mapping, it checks if mapping already exists</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mrn_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the mrn file.</p></li>
+<li><p><strong>mrn_file_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimiter to be used while reading the file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.patient.patient_mapping.PatientMapping.get_max_patient_num">
+<code class="sig-name descname">get_max_patient_num</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.patient_mapping.PatientMapping.get_max_patient_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method runs the query on patient mapping to get max patient_num.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.patient.patient_mapping.PatientMapping.get_next_patient_num">
+<code class="sig-name descname">get_next_patient_num</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.patient_mapping.PatientMapping.get_next_patient_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method  increments patient num by 1.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.patient.patient_mapping.PatientMapping.insert_patient_mapping">
+<code class="sig-name descname">insert_patient_mapping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">patient_num</span></em>, <em class="sig-param"><span class="n">pt_ids</span></em>, <em class="sig-param"><span class="n">pt_id_srcs</span></em>, <em class="sig-param"><span class="n">patient_map</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.patient_mapping.PatientMapping.insert_patient_mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes patient mapping to the database table using pyodbc connection cursor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>patient_num</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – I2b2 mapped patient id.</p></li>
+<li><p><strong>pt_ids</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – List of src patient ids from different sources.</p></li>
+<li><p><strong>pt_id_srcs</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – List of different sources.</p></li>
+<li><p><strong>patient_map</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Patient map of existing mapping.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.patient.patient_mapping.PatientMapping.save_patient_mapping">
+<code class="sig-name descname">save_patient_mapping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">patients</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.patient_mapping.PatientMapping.save_patient_mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method saves patient mappings in a database</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>patients</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – List of patient mappings to be inserted in database.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.patient_mapping.create_patient_mapping">
+<code class="sig-prename descclassname">i2b2_cdi.patient.patient_mapping.</code><code class="sig-name descname">create_patient_mapping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mrn_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.patient_mapping.create_patient_mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>This methods contains housekeeping needs to be done before de-identifing patient mrn file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mrn_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the input mrn csv file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.patient_mapping.get_patient_mapping">
+<code class="sig-prename descclassname">i2b2_cdi.patient.patient_mapping.</code><code class="sig-name descname">get_patient_mapping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.patient_mapping.get_patient_mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get patient mapping data from i2b2 instance</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.patient.perform_patient">
+<span id="i2b2-cdi-patient-perform-patient-module"></span><h2>i2b2_cdi.patient.perform_patient module<a class="headerlink" href="#module-i2b2_cdi.patient.perform_patient" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-perform_patient">
+<span id="perform-patient-process-patient-mapping"></span><h3><a class="reference internal" href="#module-perform_patient" title="perform_patient: module contains methods for importing, deleting patient mappings (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">perform_patient</span></code></a> – process patient mapping<a class="headerlink" href="#module-perform_patient" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt id="i2b2_cdi.patient.perform_patient.bcp_upload">
+<code class="sig-prename descclassname">i2b2_cdi.patient.perform_patient.</code><code class="sig-name descname">bcp_upload</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bcp_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.perform_patient.bcp_upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upload the encounters data from bcp file to the i2b2 instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>bcp_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the bcp file having encounters data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.perform_patient.convert_csv_to_bcp">
+<code class="sig-prename descclassname">i2b2_cdi.patient.perform_patient.</code><code class="sig-name descname">convert_csv_to_bcp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.perform_patient.convert_csv_to_bcp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform the de-dentified patients csv file to the bcp file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the file which needs to be converted to bcp file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>path to the bcp file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.perform_patient.de_identify_patients">
+<code class="sig-prename descclassname">i2b2_cdi.patient.perform_patient.</code><code class="sig-name descname">de_identify_patients</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.perform_patient.de_identify_patients" title="Permalink to this definition">¶</a></dt>
+<dd><p>DeIdentify the patients data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the file which needs to be deidentified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>path to the deidentified file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.perform_patient.delete_patient_mappings">
+<code class="sig-prename descclassname">i2b2_cdi.patient.perform_patient.</code><code class="sig-name descname">delete_patient_mappings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.perform_patient.delete_patient_mappings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete patient mapping from i2b2 instance</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.perform_patient.delete_patients">
+<code class="sig-prename descclassname">i2b2_cdi.patient.perform_patient.</code><code class="sig-name descname">delete_patients</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.perform_patient.delete_patients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete patients from i2b2 instance</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.perform_patient.get_argument_parser">
+<code class="sig-prename descclassname">i2b2_cdi.patient.perform_patient.</code><code class="sig-name descname">get_argument_parser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.perform_patient.get_argument_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the command line arguments and passes to the ArgumentParser</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>arguments provided on command line while running the script</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Namespace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.perform_patient.load_patient_mapping">
+<code class="sig-prename descclassname">i2b2_cdi.patient.perform_patient.</code><code class="sig-name descname">load_patient_mapping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mrn_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.perform_patient.load_patient_mapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load patient mapping from the given mrn file to the i2b2 instance using pyodbc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mrn_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the file which needs to be imported</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.perform_patient.load_patients">
+<code class="sig-prename descclassname">i2b2_cdi.patient.perform_patient.</code><code class="sig-name descname">load_patients</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">patient_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.perform_patient.load_patients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load patients from the given patient file to the i2b2 instance using pyodbc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>patient_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the file which needs to be imported</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.patient.transform_file">
+<span id="i2b2-cdi-patient-transform-file-module"></span><h2>i2b2_cdi.patient.transform_file module<a class="headerlink" href="#module-i2b2_cdi.patient.transform_file" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-transform_file">
+<span id="transform-file-transform-data-from-csv-file-to-bcp"></span><h3><a class="reference internal" href="#module-transform_file" title="transform_file: module contains methods for transforming data from csv file to bcp file (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">transform_file</span></code></a> – transform data from csv file to bcp<a class="headerlink" href="#module-transform_file" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="i2b2_cdi.patient.transform_file.TransformFile">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.patient.transform_file.</code><code class="sig-name descname">TransformFile</code><a class="headerlink" href="#i2b2_cdi.patient.transform_file.TransformFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The class provides the interface for transforming csv data to bcp file</p>
+<dl class="py method">
+<dt id="i2b2_cdi.patient.transform_file.TransformFile.csv_to_bcp">
+<code class="sig-name descname">csv_to_bcp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_file_path</span></em>, <em class="sig-param"><span class="n">input_csv_delimiter</span></em>, <em class="sig-param"><span class="n">bcp_file_path</span></em>, <em class="sig-param"><span class="n">output_bcp_delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.transform_file.TransformFile.csv_to_bcp" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method transforms csv file to bcp, Error records will be logged to log file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>csv_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the input csv file which needs to be converted to bcp file</p></li>
+<li><p><strong>input_csv_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimiter of the input csv file, which will be used while reading csv file.</p></li>
+<li><p><strong>bcp_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the output bcp file.</p></li>
+<li><p><strong>output_bcp_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimiter of the output bcp file, which will be used while writing bcp file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.patient.transform_file.TransformFile.write_to_bcp_file">
+<code class="sig-name descname">write_to_bcp_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_valid_rows_arr</span></em>, <em class="sig-param"><span class="n">bcp_file_path</span></em>, <em class="sig-param"><span class="n">output_bcp_delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.transform_file.TransformFile.write_to_bcp_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes the list of rows to the bcp file using csv writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_valid_rows_arr</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – List of valid patients to be written into bcp file.</p></li>
+<li><p><strong>bcp_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the output bcp file.</p></li>
+<li><p><strong>output_bcp_delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimeter to be used in bcp file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.patient.transform_file.do_transform">
+<code class="sig-prename descclassname">i2b2_cdi.patient.transform_file.</code><code class="sig-name descname">do_transform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">csv_file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.patient.transform_file.do_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>This methods contains housekeeping needs to be done before conversion of the csv to bcp</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>csv_file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the input csv file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Path to converted bcp file
+str: path to the error log file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.patient">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-i2b2_cdi.patient" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">i2b2_cdi.patient package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-i2b2_cdi.patient.deid_patient">i2b2_cdi.patient.deid_patient module</a><ul>
+<li><a class="reference internal" href="#module-deid_patient"><code class="xref py py-mod docutils literal notranslate"><span class="pre">deid_patient</span></code> – De-identifying patient dimensions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.patient.delete_patient">i2b2_cdi.patient.delete_patient module</a><ul>
+<li><a class="reference internal" href="#module-delete_patient"><code class="xref py py-mod docutils literal notranslate"><span class="pre">delete_patient</span></code> – Delete the patient mapping</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.patient.patient_mapping">i2b2_cdi.patient.patient_mapping module</a><ul>
+<li><a class="reference internal" href="#module-patient_mapping"><code class="xref py py-mod docutils literal notranslate"><span class="pre">patient_mapping</span></code> – Create/Get patient mapping</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.patient.perform_patient">i2b2_cdi.patient.perform_patient module</a><ul>
+<li><a class="reference internal" href="#module-perform_patient"><code class="xref py py-mod docutils literal notranslate"><span class="pre">perform_patient</span></code> – process patient mapping</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.patient.transform_file">i2b2_cdi.patient.transform_file module</a><ul>
+<li><a class="reference internal" href="#module-transform_file"><code class="xref py py-mod docutils literal notranslate"><span class="pre">transform_file</span></code> – transform data from csv file to bcp</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.patient">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">I2B2-CDI 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">i2b2_cdi.patient package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, i2b2-cdi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.0.
+    </div>
+  </body>
+</html>

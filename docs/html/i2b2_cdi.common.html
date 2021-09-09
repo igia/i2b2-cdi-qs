@@ -1,0 +1,391 @@
+
+<!--
+
+    This Source Code Form is subject to the terms of the Mozilla Public License, v.
+    2.0 with a Healthcare Disclaimer.
+    A copy of the Mozilla Public License, v. 2.0 with the Healthcare Disclaimer can
+    be found under the top level directory, named LICENSE.
+    If a copy of the MPL was not distributed with this file, You can obtain one at
+    http://mozilla.org/MPL/2.0/.
+    If a copy of the Healthcare Disclaimer was not distributed with this file, You
+    can obtain one at the project website https://github.com/igia.
+
+    Copyright (C) 2021-2022 Persistent Systems, Inc.
+
+-->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i2b2_cdi.common package &#8212; I2B2-CDI 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">I2B2-CDI 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">i2b2_cdi.common package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="i2b2-cdi-common-package">
+<h1>i2b2_cdi.common package<a class="headerlink" href="#i2b2-cdi-common-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-i2b2_cdi.common.bcolors">
+<span id="i2b2-cdi-common-bcolors-module"></span><h2>i2b2_cdi.common.bcolors module<a class="headerlink" href="#module-i2b2_cdi.common.bcolors" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-bcolors">
+<span id="bcolors-colors-for-text"></span><h3><a class="reference internal" href="#module-bcolors" title="bcolors: module contains class for providing colors for the text (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bcolors</span></code></a> – Colors for text<a class="headerlink" href="#module-bcolors" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="i2b2_cdi.common.bcolors.BColors">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.common.bcolors.</code><code class="sig-name descname">BColors</code><a class="headerlink" href="#i2b2_cdi.common.bcolors.BColors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The bcolors class helps to format the logs with
+different colors according to their logging level.</p>
+<dl class="py attribute">
+<dt id="i2b2_cdi.common.bcolors.BColors.BOLD">
+<code class="sig-name descname">BOLD</code><em class="property"> = '\x1b[1m'</em><a class="headerlink" href="#i2b2_cdi.common.bcolors.BColors.BOLD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.common.bcolors.BColors.ENDC">
+<code class="sig-name descname">ENDC</code><em class="property"> = '\x1b[0m'</em><a class="headerlink" href="#i2b2_cdi.common.bcolors.BColors.ENDC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.common.bcolors.BColors.FAIL">
+<code class="sig-name descname">FAIL</code><em class="property"> = '\x1b[91m'</em><a class="headerlink" href="#i2b2_cdi.common.bcolors.BColors.FAIL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.common.bcolors.BColors.HEADER">
+<code class="sig-name descname">HEADER</code><em class="property"> = '\x1b[95m'</em><a class="headerlink" href="#i2b2_cdi.common.bcolors.BColors.HEADER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.common.bcolors.BColors.OKBLUE">
+<code class="sig-name descname">OKBLUE</code><em class="property"> = '\x1b[94m'</em><a class="headerlink" href="#i2b2_cdi.common.bcolors.BColors.OKBLUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.common.bcolors.BColors.OKGREEN">
+<code class="sig-name descname">OKGREEN</code><em class="property"> = '\x1b[92m'</em><a class="headerlink" href="#i2b2_cdi.common.bcolors.BColors.OKGREEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.common.bcolors.BColors.UNDERLINE">
+<code class="sig-name descname">UNDERLINE</code><em class="property"> = '\x1b[4m'</em><a class="headerlink" href="#i2b2_cdi.common.bcolors.BColors.UNDERLINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="i2b2_cdi.common.bcolors.BColors.WARNING">
+<code class="sig-name descname">WARNING</code><em class="property"> = '\x1b[93m'</em><a class="headerlink" href="#i2b2_cdi.common.bcolors.BColors.WARNING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.common.py_bcp">
+<span id="i2b2-cdi-common-py-bcp-module"></span><h2>i2b2_cdi.common.py_bcp module<a class="headerlink" href="#module-i2b2_cdi.common.py_bcp" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-py_bcp">
+<span id="py-bcp-bcp-tooling"></span><h3><a class="reference internal" href="#module-py_bcp" title="py_bcp: module contains class for supporting bcp tool operations, wrapper on the bcp tool (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_bcp</span></code></a> – bcp tooling<a class="headerlink" href="#module-py_bcp" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="i2b2_cdi.common.py_bcp.PyBCP">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.common.py_bcp.</code><code class="sig-name descname">PyBCP</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">table_name</span></em>, <em class="sig-param"><span class="n">import_file</span></em>, <em class="sig-param"><span class="n">delimiter</span></em>, <em class="sig-param"><span class="n">batch_size</span></em>, <em class="sig-param"><span class="n">error_file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.py_bcp.PyBCP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class provides the wrapper method on bcp tool</p>
+<dl class="py method">
+<dt id="i2b2_cdi.common.py_bcp.PyBCP.execute_sql">
+<code class="sig-name descname">execute_sql</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.py_bcp.PyBCP.execute_sql" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper method to execute the queries using sqlcmd command</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>str</em>) – path to the sql script file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="i2b2_cdi.common.py_bcp.PyBCP.upload">
+<code class="sig-name descname">upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.py_bcp.PyBCP.upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper ethod for uploading data file using bcp tool</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.common.synthea_to_i2b2">
+<span id="i2b2-cdi-common-synthea-to-i2b2-module"></span><h2>i2b2_cdi.common.synthea_to_i2b2 module<a class="headerlink" href="#module-i2b2_cdi.common.synthea_to_i2b2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-synthea_to_i2b2">
+<span id="synthea-to-i2b2-transforms-synthea-dataset-to-i2b2-format-dataset"></span><h3><a class="reference internal" href="#module-synthea_to_i2b2" title="synthea_to_i2b2: module contains methods for transforming synthea dataset to i2b2 format dataset (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">synthea_to_i2b2</span></code></a> – transforms synthea dataset to i2b2 format dataset<a class="headerlink" href="#module-synthea_to_i2b2" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt id="i2b2_cdi.common.synthea_to_i2b2.csv_rw_encounter">
+<code class="sig-prename descclassname">i2b2_cdi.common.synthea_to_i2b2.</code><code class="sig-name descname">csv_rw_encounter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">synthetic_file</span></em>, <em class="sig-param"><span class="n">delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.synthea_to_i2b2.csv_rw_encounter" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for transforming synthetic encounters to i2b2 format encounters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>synthetic_file</strong> (<em>str</em>) – synthetic encounters file path</p></li>
+<li><p><strong>delimiter</strong> (<em>str</em>) – delimiter needs to be added for csv operations</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.synthea_to_i2b2.csv_rw_fact">
+<code class="sig-prename descclassname">i2b2_cdi.common.synthea_to_i2b2.</code><code class="sig-name descname">csv_rw_fact</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">synthetic_file</span></em>, <em class="sig-param"><span class="n">delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.synthea_to_i2b2.csv_rw_fact" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for transforming synthetic observations to i2b2 format facts</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>synthetic_file</strong> (<em>str</em>) – synthetic observations file path</p></li>
+<li><p><strong>delimiter</strong> (<em>str</em>) – delimiter needs to be added for csv operations</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.synthea_to_i2b2.csv_rw_mrn">
+<code class="sig-prename descclassname">i2b2_cdi.common.synthea_to_i2b2.</code><code class="sig-name descname">csv_rw_mrn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">synthetic_file</span></em>, <em class="sig-param"><span class="n">delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.synthea_to_i2b2.csv_rw_mrn" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for transforming synthetic patients to i2b2 format patients</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>synthetic_file</strong> (<em>str</em>) – synthetic patients file path</p></li>
+<li><p><strong>delimiter</strong> (<em>str</em>) – delimiter needs to be added for csv operations</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.synthea_to_i2b2.delete_file_if_exists">
+<code class="sig-prename descclassname">i2b2_cdi.common.synthea_to_i2b2.</code><code class="sig-name descname">delete_file_if_exists</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.synthea_to_i2b2.delete_file_if_exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method deletes the provided file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the file to be deleted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.synthea_to_i2b2.file_len">
+<code class="sig-prename descclassname">i2b2_cdi.common.synthea_to_i2b2.</code><code class="sig-name descname">file_len</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fname</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.synthea_to_i2b2.file_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the total number of line counts for the specified file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fname</strong> (<em>str</em>) – name or path of the file for which, the lines to be calculated</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>count of total number of lines from the provided file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.synthea_to_i2b2.mkParentDir">
+<code class="sig-prename descclassname">i2b2_cdi.common.synthea_to_i2b2.</code><code class="sig-name descname">mkParentDir</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.synthea_to_i2b2.mkParentDir" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method create the paranet directory for the provided file path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.synthea_to_i2b2.write_file_header">
+<code class="sig-prename descclassname">i2b2_cdi.common.synthea_to_i2b2.</code><code class="sig-name descname">write_file_header</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_path</span></em>, <em class="sig-param"><span class="n">header</span></em>, <em class="sig-param"><span class="n">delimiter</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.synthea_to_i2b2.write_file_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes the header to the file using csv writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the file.</p></li>
+<li><p><strong>header</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – headers to be written to the files.</p></li>
+<li><p><strong>delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – delimiter needs to be added to csv file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.synthea_to_i2b2.write_to_file">
+<code class="sig-prename descclassname">i2b2_cdi.common.synthea_to_i2b2.</code><code class="sig-name descname">write_to_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">batch</span></em>, <em class="sig-param"><span class="n">file_path</span></em>, <em class="sig-param"><span class="n">delimiter</span></em>, <em class="sig-param"><span class="n">header</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.synthea_to_i2b2.write_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method writes the list of rows to the file using csv writer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – List of records to be written to the file.</p></li>
+<li><p><strong>file_path</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Path to the output file.</p></li>
+<li><p><strong>delimiter</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – Delimeter to be used in csv file.</p></li>
+<li><p><strong>header</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, mandatory) – headers to which the records to be written.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.common.utils">
+<span id="i2b2-cdi-common-utils-module"></span><h2>i2b2_cdi.common.utils module<a class="headerlink" href="#module-i2b2_cdi.common.utils" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-Utils">
+<span id="utils-shared-utilities-to-to-be-used-in-whole-project"></span><h3><a class="reference internal" href="#module-Utils" title="Utils: module contains classes and methods implemented as part of shared utilities which can be used in whole project (Linux/Windows)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Utils</span></code></a> – Shared utilities to to be used in whole project<a class="headerlink" href="#module-Utils" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt id="i2b2_cdi.common.utils.Time">
+<em class="property">class </em><code class="sig-prename descclassname">i2b2_cdi.common.utils.</code><code class="sig-name descname">Time</code><a class="headerlink" href="#i2b2_cdi.common.utils.Time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class implements various methods to calculate time required to perform certain operation</p>
+<dl class="py method">
+<dt id="i2b2_cdi.common.utils.Time.timeStep">
+<code class="sig-name descname">timeStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.utils.Time.timeStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the time taken by the particular process and displays it</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.utils.delete_file_if_exists">
+<code class="sig-prename descclassname">i2b2_cdi.common.utils.</code><code class="sig-name descname">delete_file_if_exists</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.utils.delete_file_if_exists" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.utils.file_len">
+<code class="sig-prename descclassname">i2b2_cdi.common.utils.</code><code class="sig-name descname">file_len</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fname</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.utils.file_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide the total number of word counts for the specified file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fname</strong> (<em>str</em>) – name or path of the file for which, the word count to be calculated</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>count of total number of words from the provided file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.utils.getHash">
+<code class="sig-prename descclassname">i2b2_cdi.common.utils.</code><code class="sig-name descname">getHash</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_txt</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.utils.getHash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.utils.getParents">
+<code class="sig-prename descclassname">i2b2_cdi.common.utils.</code><code class="sig-name descname">getParents</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.utils.getParents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.utils.mkParentDir">
+<code class="sig-prename descclassname">i2b2_cdi.common.utils.</code><code class="sig-name descname">mkParentDir</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filePath</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.utils.mkParentDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="i2b2_cdi.common.utils.path2Code">
+<code class="sig-prename descclassname">i2b2_cdi.common.utils.</code><code class="sig-name descname">path2Code</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#i2b2_cdi.common.utils.path2Code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-i2b2_cdi.common">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-i2b2_cdi.common" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">i2b2_cdi.common package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-i2b2_cdi.common.bcolors">i2b2_cdi.common.bcolors module</a><ul>
+<li><a class="reference internal" href="#module-bcolors"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bcolors</span></code> – Colors for text</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.common.py_bcp">i2b2_cdi.common.py_bcp module</a><ul>
+<li><a class="reference internal" href="#module-py_bcp"><code class="xref py py-mod docutils literal notranslate"><span class="pre">py_bcp</span></code> – bcp tooling</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.common.synthea_to_i2b2">i2b2_cdi.common.synthea_to_i2b2 module</a><ul>
+<li><a class="reference internal" href="#module-synthea_to_i2b2"><code class="xref py py-mod docutils literal notranslate"><span class="pre">synthea_to_i2b2</span></code> – transforms synthea dataset to i2b2 format dataset</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.common.utils">i2b2_cdi.common.utils module</a><ul>
+<li><a class="reference internal" href="#module-Utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Utils</span></code> – Shared utilities to to be used in whole project</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-i2b2_cdi.common">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">I2B2-CDI 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">i2b2_cdi.common package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, i2b2-cdi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.0.
+    </div>
+  </body>
+</html>
